@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo de Livros</title>
+    <link rel="stylesheet" href="emprestimo.css">
+</head>
+<body>
+    <header>
+        <h1>Empréstimo de Livros</h1>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Cadastrar Empréstimo</h2>
+        <form id="emprestimoForm">
+            <label for="clienteId">ID do Cliente:</label>
+            <input type="number" id="clienteId" name="clienteId" required><br>
+
+            <label for="livroId">ID do Livro:</label>
+            <input type="number" id="livroId" name="livroId" required><br>
+
+            <label for="dataEmprestimo">Data do Empréstimo:</label>
+            <input type="date" id="dataEmprestimo" name="dataEmprestimo" required><br>
+
+            <label for="dataDevolucao">Data de Devolução:</label>
+            <input type="date" id="dataDevolucao" name="dataDevolucao"><br>
+
+            <label for="dataPrevista">Data Prevista de Devolução:</label>
+            <input type="date" id="dataPrevista" name="dataPrevista" required><br>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="ativo">Ativo</option>
+                <option value="concluido">Concluído</option>
+                <option value="atrasado">Atrasado</option>
+            </select><br>
+
+            <button type="submit">Cadastrar Empréstimo</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Empréstimos Registrados</h2>
+        <button id="listarEmprestimosBtn">Listar Empréstimos</button>
+        <ul id="emprestimosList"></ul>
+    </section>
+
+    <script src="emprestimos.js"></script>
+</body>
+</html>
